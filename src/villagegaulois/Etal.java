@@ -58,6 +58,17 @@ public class Etal {
 	 *         vendu [2] : quantité de produit à vendre au début du marché [4] :
 	 *         quantité de produit vendu
 	 */
+	
+	public String[] donneesVente() {
+		String[] donnees = new String[5];
+		donnees[0]=String.valueOf(this.etalOccupe);
+		donnees[1]=this.getVendeur().getNom();
+		donnees[2]=this.getProduit();
+		donnees[3]=String.valueOf(this.quantiteDebutMarche);
+		donnees[4]=String.valueOf(this.quantiteDebutMarche-this.quantite);
+		return donnees;
+	}
+	
 	public void libererEtal() {
 		etalOccupe = false;
 	}

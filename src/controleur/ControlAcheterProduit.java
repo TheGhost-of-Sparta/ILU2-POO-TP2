@@ -15,5 +15,15 @@ public class ControlAcheterProduit {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
+	public void acheterProduit(String nomVendeur, int quantite) {
+		controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur).acheterProduit(quantite);
+	}
+	
+	public String[] getVendeur(String produit) {
+		return village.donnerEtatMarche();
+	}
+	
+	public boolean verifierIdentite(String nomAcheteur) {
+		return controlVerifierIdentite.verifierIdentite(nomAcheteur);
+	}
 }

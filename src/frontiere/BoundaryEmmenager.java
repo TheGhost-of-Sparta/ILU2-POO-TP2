@@ -27,7 +27,7 @@ public class BoundaryEmmenager {
 					break;
 
 				case 2:
-					//TODO a completer
+					emmenagerGaulois(nomVisiteur);
 					break;
 
 				default:
@@ -40,6 +40,14 @@ public class BoundaryEmmenager {
 	}
 
 	private void emmenagerDruide(String nomVisiteur) {
-		//TODO a completer
+		 int force= Clavier.entrerEntier("Quelle est votre force?");
+		 int effetPotionMin= Clavier.entrerEntier("Quelle est votre effet de potion minimum ?");
+		 int effetPotionMax = Clavier.entrerEntier("Quelle est votre effet de potion max");
+		controlEmmenager.ajouterDruide(nomVisiteur, force, effetPotionMin, effetPotionMax);
+	}
+	
+	private void emmenagerGaulois(String nomVisiteur) {
+		int force = Clavier.entrerEntier("Quelle est votre force?");
+		controlEmmenager.ajouterGaulois(nomVisiteur, force);
 	}
 }
